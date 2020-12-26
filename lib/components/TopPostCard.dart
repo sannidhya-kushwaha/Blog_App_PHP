@@ -4,6 +4,8 @@ import 'package:http/http.dart' as http;
 
 import 'dart:async';
 
+import '../page/PostDetails.dart';
+
 class TopPostCard extends StatefulWidget {
   @override
   _TopPostCardState createState() => _TopPostCardState();
@@ -184,7 +186,20 @@ class _NewPostItemState extends State<NewPostItem> {
               style:
                   TextStyle(color: Colors.grey[200], fontFamily: 'BebasNeue'),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PostDetails(
+                    title: widget.title,
+                    image: widget.image,
+                    author: widget.author,
+                    body: widget.body,
+                    postDate: widget.postDate,
+                  ),
+                ),
+              );
+            },
           ),
         ),
       ],
