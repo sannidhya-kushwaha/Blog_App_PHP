@@ -34,7 +34,7 @@ class PostDetails extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                body,
+                body == null ? "" : body,
                 style: TextStyle(
                   fontSize: 20,
                 ),

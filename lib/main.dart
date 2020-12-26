@@ -97,9 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           CategoryListItem(),
-
-
-          RecentPostItem();
+          RecentPostItem(),
         ],
       ),
     );
