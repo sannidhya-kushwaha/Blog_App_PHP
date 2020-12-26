@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import '../page/SelectCategoryBy.dart';
+
 class CategoryListItem extends StatefulWidget {
   @override
   _CategoryListItemState createState() => _CategoryListItemState();
@@ -67,6 +69,13 @@ class _CategoryItemState extends State<CategoryItem> {
                 color: Colors.grey, fontSize: 18, fontWeight: FontWeight.bold),
           ),
           onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) =>
+                    SelectCategoryBy(categoryName: widget.categoryName),
+              ),
+            );
             debugPrint(
               widget.categoryName,
             );

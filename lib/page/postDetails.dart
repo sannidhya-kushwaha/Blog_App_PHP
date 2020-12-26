@@ -29,7 +29,7 @@ class PostDetails extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            Container(child: Image.network(image)),
+            Container(child: Image.network(image, height: 250)),
             SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.all(8.0),
