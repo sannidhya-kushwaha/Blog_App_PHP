@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import './components/TopPostCard.dart';
+import './components/CategoryListItem.dart';
 
 void main() {
   runApp(MyApp());
@@ -85,6 +86,16 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
           TopPostCard(),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SizedBox(
+              child: Text(
+                'Top Categories',
+                style: TextStyle(fontSize: 25, fontFamily: 'BebasNeue'),
+              ),
+            ),
+          ),
+          CategoryListItem(),
         ],
       ),
     );
