@@ -14,7 +14,7 @@ class SelectCategoryBy extends StatefulWidget {
 class _SelectCategoryByState extends State<SelectCategoryBy> {
   List categoryByPost = List();
   Future categoryByData() async {
-    var url = "http://192.168.43.212/Blog_App_PHP/uploads/categoryByPost.php";
+    var url = "http://192.168.43.212/Blog_App_PHP/categoryByPost.php";
     var response = await http.post(url, body: {'name': widget.categoryName});
     if (response.statusCode == 200) {
       var jsonData = json.decode(response.body);
