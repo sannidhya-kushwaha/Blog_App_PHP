@@ -5,6 +5,7 @@ import './components/CategoryListItem.dart';
 import './components/RecentPostItem.dart';
 import './page/aboutUs.dart';
 import './page/contactUs.dart';
+import './page/login.dart';
 
 void main() {
   runApp(MyApp());
@@ -102,6 +103,12 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ListTile(
               onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Login(),
+                  ),
+                );
                 debugPrint("Login");
               },
               leading: Icon(
