@@ -70,7 +70,7 @@ class _RecentItemState extends State<RecentItem> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(
           children: [
@@ -97,39 +97,35 @@ class _RecentItemState extends State<RecentItem> {
               ),
             ),
             Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    widget.author,
-                    style: TextStyle(color: Colors.grey),
-                  ),
-                ),
                 Row(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(0.0),
-                      child: Text(
-                        'by :' + widget.author,
-                        style: TextStyle(color: Colors.grey),
-                      ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(0.0),
+                          child: Text(
+                            'by :' + widget.author,
+                            style: TextStyle(color: Colors.grey),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(0.0),
+                          child: Text(
+                            'posted on :' + widget.date,
+                            style: TextStyle(color: Colors.grey),
+                          ),
+                        ),
+                      ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(0.0),
-                      child: Text(
-                        'posted on :' + widget.date,
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                    ),
+                    Container(
+                      padding: EdgeInsets.all(5),
+                      child: Image.network(widget.image, height: 70, width: 70),
+                    )
                   ],
                 )
               ],
             ),
-            Container(
-              padding: EdgeInsets.all(5),
-              child: Image.network(widget.image, height: 70, width: 70),
-            )
           ],
         )
       ],
